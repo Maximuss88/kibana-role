@@ -2,7 +2,7 @@
 - name: "Download Kibana's deb"
   get_url:
     url: "https://artifacts.elastic.co/downloads/kibana/kibana-{{ elasticsearch_version }}-amd64.deb"
-    dest: "files/kibana-{{ elasticsearch_version }}-amd64.deb"
+    dest: "/home/max/.ansible/roles/kibana-role/files/kibana-{{ elasticsearch_version }}-amd64.deb"
   delegate_to: localhost
   register: download_kibana
   until: download_kibana is succeeded
